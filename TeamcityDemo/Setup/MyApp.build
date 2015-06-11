@@ -1,6 +1,6 @@
 <project name="TeamcityDemo" default="build">
   <property name="output.dir" value="Msi" />
-  <property name="build.configuration" value="debug" />
+  <property name="solution.build" value="debug" />
   <property name="solution.dir" value="../../" />
   <property name="solution.name" value="TeamcityDemo" />
   <property name="nant.contrib.dll" value="Nant\bin\Nant.Contrib.Tasks.dll" />
@@ -14,7 +14,7 @@
   <target name="build" depends="clean">
     <loadtasks assembly="${nant.contrib.dll}" />
     <msbuild project="${solution.dir}\${solution.name}.sln">
-      <arg value="/property:Configuration=${build.configuration}" />
+      <arg value="/property:Configuration=${solution.build}" />
     </msbuild>
   </target>
 </project>
