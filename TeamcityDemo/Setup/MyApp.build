@@ -1,15 +1,20 @@
-<project name="WebApplication1" default="build">
-   <property name="output.dir" value="Msi" />
-   <property name="solution.config" value="debug" />
+<project name="TeamcityDemo" default="build">
+  <property name="output.dir" value="Msi" />
+  <property name="build.configuration" value="debug" />
+  <property name="solution.dir" value="../../" />
+  <property name="solution.name" value="TeamcityDemo" />
+  <property name="nant.contrib.dll" value="Nant\bin\Nant.Contrib.Tasks.dll" />
 
-   <target name="clean">
-      <delete dir="${output.dir}"
-              failonerror="false" />
-      <mkdir dir="${output.dir}" />
-   </target>
+  <target name="clean">
+    <delete dir="${output.dir}"
+            failonerror="false" />
+    <mkdir dir="${output.dir}" />
+  </target>
 
-   <target name="build" depends="clean">
-     <solution configuration="${solution.config}"
-                solutionfile="../../WebApplication1.sln" />
-   </target>
+  <target name="build" depends="clean">
+    <loadtasks assembly="${nant.contrib.dll}" />
+    <msbuild project="${solution.dir}\${solution.name}.sln">
+      <arg value="/property:Configuration=${build.configuration}" />
+    </msbuild>
+  </target>
 </project>

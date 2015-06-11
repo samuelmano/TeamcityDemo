@@ -191,6 +191,52 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Setup\Nant\extensions\common\2.0\NAnt.MSBuild.dll" />
+    <Content Include="Setup\Nant\extensions\common\2.0\NAnt.MSBuild.xml" />
+    <Content Include="Setup\Nant\extensions\common\4.0\NAnt.MSBuild.dll" />
+    <Content Include="Setup\Nant\extensions\common\4.0\NAnt.MSBuild.xml" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit-console-runner.dll" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit-console.exe" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit.core.dll" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit.core.interfaces.dll" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit.framework.dll" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit.util.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\ICSharpCode.SharpCvsLib.Console.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\ICSharpCode.SharpCvsLib.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\NDoc.Core.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\NDoc.Documenter.Msdn.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\NDoc.ExtendedUI.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\netDumbster.dll" />
+    <Content Include="Setup\Nant\lib\common\neutral\NUnitCore.dll" />
+    <Content Include="Setup\Nant\log4net.dll" />
+    <Content Include="Setup\Nant\NAnt.CompressionTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.CompressionTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.Core.dll" />
+    <Content Include="Setup\Nant\NAnt.Core.xml" />
+    <Content Include="Setup\Nant\NAnt.DotNetTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.DotNetTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.exe" />
+    <Content Include="Setup\Nant\NAnt.MSNetTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.MSNetTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.NUnit.dll" />
+    <Content Include="Setup\Nant\NAnt.NUnit.xml" />
+    <Content Include="Setup\Nant\NAnt.NUnit1Tasks.dll" />
+    <Content Include="Setup\Nant\NAnt.NUnit1Tasks.xml" />
+    <Content Include="Setup\Nant\NAnt.NUnit2Tasks.dll" />
+    <Content Include="Setup\Nant\NAnt.NUnit2Tasks.xml" />
+    <Content Include="Setup\Nant\NAnt.SourceControlTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.SourceControlTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.VisualCppTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.VisualCppTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.VSNetTasks.dll" />
+    <Content Include="Setup\Nant\NAnt.VSNetTasks.xml" />
+    <Content Include="Setup\Nant\NAnt.Win32Tasks.dll" />
+    <Content Include="Setup\Nant\NAnt.Win32Tasks.xml" />
+    <Content Include="Setup\Nant\NAnt.xml" />
+    <Content Include="Setup\Nant\NDoc.Documenter.NAnt.dll" />
+    <Content Include="Setup\Nant\NDoc.Documenter.NAnt.xml" />
+    <Content Include="Setup\Nant\scvs.exe" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -226,9 +272,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Setup\build.bat" />
+    <Content Include="Setup\MyApp.build" />
+    <Content Include="Setup\Nant\lib\common\2.0\nunit-console.exe.config" />
+    <Content Include="Setup\Nant\NAnt.exe.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Setup\Msi\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -237,7 +288,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
