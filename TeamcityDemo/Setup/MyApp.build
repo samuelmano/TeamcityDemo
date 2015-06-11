@@ -1,0 +1,15 @@
+<project name="WebApplication1" default="build">
+   <property name="output.dir" value="Msi" />
+   <property name="solution.config" value="debug" />
+
+   <target name="clean">
+      <delete dir="${output.dir}"
+              failonerror="false" />
+      <mkdir dir="${output.dir}" />
+   </target>
+
+   <target name="build" depends="clean">
+     <solution configuration="${solution.config}"
+                solutionfile="../../WebApplication1.sln" />
+   </target>
+</project>
